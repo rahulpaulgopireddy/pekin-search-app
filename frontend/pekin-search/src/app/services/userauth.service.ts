@@ -17,7 +17,7 @@ export class UserauthService {
   createUser(usercred: any): Observable<any> {
     return this.http
       .post<any>(
-        'http://localhost:8080/signup/',
+        'http://localhost:8080/user/signup/',
         JSON.stringify(usercred),
         this.httpOptions
       )
@@ -36,7 +36,7 @@ export class UserauthService {
 
   getCurrentUser(id: any): Observable<any> {
     return this.http
-      .get<any>('http://localhost:8080/login' + id)
+      .get<any>('http://localhost:8080/user/me' + id)
       .pipe(retry(1), catchError(this.errorHandle));
   }
 

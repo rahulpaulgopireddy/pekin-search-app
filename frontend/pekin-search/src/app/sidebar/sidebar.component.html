@@ -1,0 +1,12 @@
+<div class="sidebar-wrapper">
+  <ul style="list-style: none">
+    <li><img src="../../assets/logo.png" alt="" style="width: 45px" /></li>
+    <!-- <li (click)="pageRoute('home')">Home</li>
+    <li (click)="pageRoute('home')">Settings</li>
+    <li (click)="pageRoute('home')">Saved</li> -->
+
+    <li [routerLink]="['/dashboard']">Home</li>
+    <li [routerLink]="['/dashboard/saved']">Saved</li>
+    <li [routerLink]="['/dashboard/me']">Profile</li>
+  </ul>
+</div>
