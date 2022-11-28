@@ -4,7 +4,7 @@ const app = express();
 const InitiateMongoDBServer = require("./config/_dbConfig");
 const user = require("./routes/userAuth");
 const feed = require("./routes/userFeed");
-
+const cors = require("cors");
 // InitiateMongoDb
 InitiateMongoDBServer();
 
@@ -13,6 +13,11 @@ const PORT = process.env.PORT || 8080;
 
 // Middleware
 // configure the app to use bodyParser()
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(
   bodyParser.urlencoded({
     extended: true,

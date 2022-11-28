@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserauthService } from './services/userauth.service';
+import { FormvalidationService } from './services/formvalidation.service';
 
 @NgModule({
   declarations: [
@@ -15,8 +18,13 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     SignupComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+  providers: [UserauthService, FormvalidationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
