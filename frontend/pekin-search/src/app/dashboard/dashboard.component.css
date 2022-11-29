@@ -3,3 +3,150 @@
   color: #a7a7a7;
   padding: 20px;
 }
+
+.SearchBar {
+  position: absolute;
+  top: 60px;
+  left: 150px;
+  height: 40px;
+  width: 400px;
+  padding: 12px 28px;
+}
+.SearchBar input {
+  height: 1000px;
+  width: 1000px;
+  padding: 12px 28px;
+}
+.button {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  width: 150px;
+  color: black;
+  background-color: white;
+  border-radius: 2px;
+  border: solid   #a18fff;
+  margin-left: 550px;
+  margin-right: -5px;
+  margin-top : 55px;
+  padding: 12px 28px;
+   
+}
+.a2{
+  
+  width: 84px;
+  height: 57px;
+  left: 112px;
+  top: 24px;
+  
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  
+  color: #A18FFF;
+  
+  }
+  li{
+    margin: 40px 0;
+    
+    
+  }
+
+  .a3{
+  
+    width: 1004px;
+    height: 10px;
+    left: 2000px;
+    top: 24px;
+    
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 5px;
+    
+    align-items: center;
+    
+    color: #A18FFF;
+    
+    }
+    .a4{
+  
+      width: 1004px;
+      height: 8px;
+      left: 112px;
+      top: 200px;
+      
+      font-family: 'Avenir Next';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 160px;
+      
+      align-items: center;
+      
+      color: #A18FFF;
+      
+      }
+      .a2{
+  
+        width: 1004px;
+        height: 57px;
+        left: 112px;
+        top: 24px;
+        
+        font-family: 'Avenir Next';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 38px;
+        
+        align-items: center;
+        color:beige;
+        
+        
+        
+        }
+
+        .a5{
+  
+          width: 1004px;
+          height: 57px;
+          left: 112px;
+          top: 24px;
+          
+          font-family: 'Avenir Next';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 38px;
+          
+          align-items: center;
+          color:beige;
+          
+          
+          
+          }
+          .text{
+  
+           
+            
+            font-family: 'Avenir Next';
+            font-style: normal;
+      
+            font-size: 10px;
+            line-height: 1px;
+            
+            
+            color:darkgray;
+            
+            
+            
+            }
+      
