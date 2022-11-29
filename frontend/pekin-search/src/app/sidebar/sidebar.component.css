@@ -1,3 +1,25 @@
 .sidebar-wrapper {
   height: 100vh;
 }
+
+li{
+  margin: 70px 0;
+}
+.a1{
+  
+width: 84px;
+height: 57px;
+left: 112px;
+top: 24px;
+
+font-family: 'Avenir Next';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 38px;
+display: flex;
+align-items: center;
+
+color: #A18FFF;
+
+}
