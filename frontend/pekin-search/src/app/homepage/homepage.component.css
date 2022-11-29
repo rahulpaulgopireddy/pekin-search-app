@@ -145,3 +145,26 @@
   bottom: 0px;
   /* padding-top: 10%; */
 }
+a:link {
+  color: grey;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: grey;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkgrey;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: grey;
+  background-color: transparent;
+  text-decoration: none;
+}
