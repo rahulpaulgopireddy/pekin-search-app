@@ -36,7 +36,7 @@ app.post("/test", (req, res) => {
 });
 // Rotues
 app.use("/user", user);
-app.use("/home", feed);
+app.use("/userfeed", feed);
 
 app.listen(PORT, (req, res) => {
   console.log(`Server Started at PORT ${PORT}`);

@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { SavedComponent } from './saved/saved.component';
+import { SearchtableComponent } from './searchtable/searchtable.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     children: [
+      { path: '', component: SearchtableComponent },
       { path: 'saved', component: SavedComponent },
       { path: 'me', component: AboutComponent },
     ],

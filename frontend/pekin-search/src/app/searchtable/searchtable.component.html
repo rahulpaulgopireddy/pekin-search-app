@@ -1,1 +1,6 @@
-<p>searchtable works!</p>
+<p><button (click)="search()">search</button></p>
+<div *ngIf="isLoading" class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

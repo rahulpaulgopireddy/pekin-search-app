@@ -15,7 +15,8 @@ import { SearchtableComponent } from './searchtable/searchtable.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutComponent } from './about/about.component';
 import { SavedComponent } from './saved/saved.component';
-
+import { NgHttpLoaderModule } from 'ng-http-loader';
+import { NgxSpinnerModule } from 'ngx-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,8 @@ import { SavedComponent } from './saved/saved.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgHttpLoaderModule.forRoot(),
+    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
   ],
   providers: [UserauthService, FormvalidationService],
   bootstrap: [AppComponent],
