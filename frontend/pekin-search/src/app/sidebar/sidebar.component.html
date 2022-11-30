@@ -27,7 +27,7 @@
       </li>
     </ul>
   </div>
-  <ul style="list-style: none">
+  <ul style="list-style: none" class="side-menu-fixed">
     <li class="a1"></li>
 
     <li>
@@ -37,27 +37,40 @@
         alt="a"
         style="width: 90px"
       />
-      <p>Welcome back<br />Rahul Paul</p>
+      <p class="user-welcome">Welcome back</p>
+      <p class="user-name">Rahul Paul</p>
     </li>
 
-    <li [routerLink]="['/dashboard/feed']">
-      <img src="../assets/Vector.png" alt="" style="width: 20px" /><a>Home</a>
+    <li [routerLink]="['/dashboard/feed']" style="padding-top: 40px">
+      <p>
+        <!-- <img src="../assets/Vector.png" alt="" class="sidebar-list-icon" /> -->
+        <i class="bi bi-house"></i>
+        <span class="sidebar-ele">Home</span>
+      </p>
     </li>
 
-    <li [routerLink]="['/dashboard/saved']">
-      <img src="../assets/Vector 2.png" alt="" style="width: 15px" />Saved
+    <li [routerLink]="['/dashboard/saved']" routerLinkActive="is-active">
+      <p>
+        <!-- <img src="../assets/Vector 2.png" alt="" class="sidebar-list-icon" /> -->
+        <i class="bi bi-bookmark"></i>
+        <span class="sidebar-ele">Saved</span>
+      </p>
     </li>
 
-    <li [routerLink]="['/dashboard/me']">
-      <img src="../assets/Vector 3.png" alt="" style="width: 15px" />Profile
+    <li [routerLink]="['/dashboard/me']" routerLinkActive="is-active">
+      <p>
+        <!-- <img src="../assets/Vector 3.png" alt="" class="sidebar-list-icon" /> -->
+        <i class="bi bi-person"></i>
+        <span class="sider-ele"> Profile</span>
+      </p>
     </li>
 
-    <li [routerLink]="['/dashboard/me']">
-      <img
-        src="../assets/Vector 4.png"
-        alt=""
-        style="width: 15px"
-      />&nbsp;&nbsp;Settings
+    <li [routerLink]="['/login']" routerLinkActive="is-active">
+      <p>
+        <!-- <img src="../assets/Vector 4.png" alt="" class="sidebar-list-icon" /> -->
+        <i class="bi bi-box-arrow-left"></i>
+        <span class="sider-ele"> SignOut</span>
+      </p>
     </li>
   </ul>
 </div>

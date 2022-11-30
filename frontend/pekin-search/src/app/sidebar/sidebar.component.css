@@ -66,3 +66,52 @@ a:active {
 .title-list {
   padding: 0px 0px 0px 15px;
 }
+
+ul {
+  padding: 0% 0% 0% 30%;
+}
+
+.user-welcome {
+  font-size: 15px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #959595;
+}
+
+.user-name {
+  font-size: 18px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+}
+.sidebar-ele {
+  /* vertical-align: text-top; */
+  padding-right: 10px;
+}
+
+.sidebar-list-icon {
+  width: 20px;
+  margin-right: 8px;
+}
+.is-active {
+  color: #a18fff;
+}
+
+.bi {
+  padding-right: 10px !important;
+}
+
+.side-menu-fixed {
+  list-style: none;
+  position: fixed;
+  left: 3% !important;
+  padding: 0px;
+}

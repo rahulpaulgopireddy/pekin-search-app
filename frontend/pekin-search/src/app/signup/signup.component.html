@@ -6,21 +6,55 @@
           <div class="card shadow-2-strong" style="border-radius: 1rem">
             <div class="card-body p-5 text-center">
               <div class="sign-up">
+                <img
+                  src="../../assets/logo.png"
+                  style="width: 50px; margin-bottom: 17px"
+                  alt=""
+                />
                 <h3><strong>Sign Up</strong></h3>
               </div>
               <div class="sign-up">
-                <h5>Unlock your research capabilities</h5>
+                <h5 style="color: #919090; margin-bottom: 20px" m>
+                  Unlock your research capabilities
+                </h5>
               </div>
 
-              <form>
+              <form
+                *ngIf="true"
+                name="form"
+                (ngSubmit)="f.form.valid && onSubmit()"
+                #f="ngForm"
+                novalidate
+              >
                 <div class="form-outline ps-1">
                   <input
                     type="email"
                     id="typeEmailX-2"
                     class="form-control form-control-lg"
                     placeholder="Username"
+                    type="text"
+                    name="username"
+                    [(ngModel)]="form.username"
+                    required
+                    minlength="3"
+                    maxlength="20"
+                    #username="ngModel"
                   />
                   <label class="form-label" for="typeEmailX-2"></label>
+                  <div
+                    class="alert-danger error-text"
+                    *ngIf="username.errors && f.submitted"
+                  >
+                    <div *ngIf="username.errors.required">
+                      Username is required
+                    </div>
+                    <div *ngIf="username.errors.minlength">
+                      Username must be at least 3 characters
+                    </div>
+                    <div *ngIf="username.errors.maxlength">
+                      Username must be at most 20 characters
+                    </div>
+                  </div>
                 </div>
 
                 <div class="form-outline ps-1">
@@ -29,8 +63,23 @@
                     id="typePasswordX-2"
                     class="form-control form-control-lg"
                     placeholder="E-mail"
+                    type="email"
+                    name="email"
+                    [(ngModel)]="form.email"
+                    required
+                    email
+                    #email="ngModel"
                   />
                   <label class="form-label" for="typePasswordX-2"></label>
+                  <div
+                    class="alert-danger error-text"
+                    *ngIf="email.errors && f.submitted"
+                  >
+                    <div *ngIf="email.errors.required">Email is required</div>
+                    <div *ngIf="email.errors.email">
+                      Email must be a valid email address
+                    </div>
+                  </div>
                 </div>
 
                 <div class="form-outline ps-1">
@@ -39,11 +88,29 @@
                     id="typeEmailX-2"
                     class="form-control form-control-lg"
                     placeholder="Password"
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    [(ngModel)]="form.password"
+                    required
+                    minlength="8"
+                    #password="ngModel"
                   />
                   <label class="form-label" for="typeEmailX-2"></label>
+                  <div
+                    class="alert-danger error-text"
+                    *ngIf="password.errors && f.submitted"
+                  >
+                    <div *ngIf="password.errors.required">
+                      Password is required
+                    </div>
+                    <div *ngIf="password.errors.minlength">
+                      Password must be at least 8 characters
+                    </div>
+                  </div>
                 </div>
 
-                <div class="form-outline ps-1">
+                <!-- <div class="form-outline ps-1">
                   <input
                     type="email"
                     id="typeEmailX-2"
@@ -51,8 +118,9 @@
                     placeholder="Confirm Password "
                   />
                   <label class="form-label" for="typeEmailX-2"></label>
-                </div>
+                </div> -->
 
+                {{ serverMessage }}
                 <!-- Checkbox -->
 
                 <button
@@ -61,9 +129,24 @@
                 >
                   Create Account
                 </button>
-
+                <button
+                  class="d-grid gap-2 col-12 mx-auto login-btn ca-1"
+                  (click)="goToPage('login')"
+                >
+                  Login
+                </button>
+                <div
+                  class="alert alert-warning"
+                  *ngIf="f.submitted && isSignUpFailed"
+                >
+                  Signup failed!<br />{{ errorMessage }}
+                </div>
                 <hr class="my-4" />
               </form>
+
+              <div class="alert alert-success" *ngIf="isSuccessful">
+                Your registration is successful!
+              </div>
             </div>
           </div>
         </div>

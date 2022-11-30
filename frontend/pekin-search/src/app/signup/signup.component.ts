@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormvalidationService } from '../services/formvalidation.service';
-
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
+import { UserauthService } from '../services/userauth.service';
+import { Router } from '@angular/router';
 interface signFormInterface {
   username: any;
   password: any;
@@ -14,13 +20,28 @@ interface signFormInterface {
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent {
-  signUpForm: FormGroup | signFormInterface | undefined | null = null;
+  // signUpForm: FormGroup | signFormInterface | undefined | null = null;
+  registerForm: any = FormGroup;
+  signUpForm: any = FormGroup;
   submitted = false;
+  form: any = {
+    username: null,
+    email: null,
+    password: null,
+  };
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
 
+  serverMessage = '';
   constructor(
+    private formBuilder: FormBuilder,
+    public userApiService: UserauthService,
     private fb: FormBuilder,
-    private _formValidator: FormvalidationService
+    private _formValidator: FormvalidationService,
+    private router: Router
   ) {}
+
   ngOnInit() {
     this.signUpForm = this.fb.group(
       {
@@ -43,19 +64,35 @@ export class SignupComponent {
       }
     );
   }
+
+  goToPage(pageName: string) {
+    this.router.navigate([`${pageName}`]);
+  }
   get signUpFormControl() {
     // @ts-ignore
     return this.signUpForm.controls;
   }
   onSubmit() {
     this.submitted = true;
-    // @ts-ignore
-    if (this.signUpForm.valid) {
-      alert(
-        'Form Submitted succesfully!!!\n Check the values in browser console.'
-      );
-      // @ts-ignore
-      console.table(this.signUpForm.value);
-    }
+    const { username, email, password } = this.form;
+    const userCred = {
+      username: username,
+      email: email,
+      password: password,
+    };
+
+    this.userApiService.createUser(userCred).subscribe(
+      (res) => {
+        console.log(res);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+        console.log(this.router.navigate(['/login']));
+      },
+      (error) => {
+        console.log(error.status, error.message);
+        this.serverMessage = error.message;
+        this.isSignUpFailed = true;
+      }
+    );
   }
 }

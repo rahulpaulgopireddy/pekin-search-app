@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { SavedComponent } from './saved/saved.component';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     ReactiveFormsModule,
     HttpClientModule,
     NgHttpLoaderModule.forRoot(),
+    FormsModule,
     NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
   ],
   providers: [UserauthService, FormvalidationService],

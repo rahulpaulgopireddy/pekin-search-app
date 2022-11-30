@@ -13,7 +13,12 @@
         <span class="search-title-tag">Library Search </span>
       </div>
       <div class="col-md-7">
-        <input class="search-input" type="text" placeholder="Search.." />
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search with hashtags here like iphone , iMac etc"
+          (input)="onSearchChange($event.target.value)"
+        />
       </div>
       <div class="col-md-2">
         <button type="button" (click)="search('test')" class="search-btn">
@@ -22,7 +27,9 @@
       </div>
     </div>
   </div>
-  <div class="">Showing {{ totalResults }} results for "{{ searchTag }}"</div>
+  <div class="" *ngIf="isloadedData">
+    Showing {{ totalResults }} results for "{{ searchTag }}"
+  </div>
   <ul style="list-style: none">
     <li class="a3" *ngFor="let tweetMeta of tweetsArr">
       <div class="a5">

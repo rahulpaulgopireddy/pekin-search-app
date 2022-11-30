@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 body,
 html {
   height: 100%;
@@ -6,4 +7,14 @@ html {
 
 .pd-0 {
   padding: 0px;
+}
+
+.in-progress {
+  width: 46%;
+  margin-top: 12%;
+  margin-left: 10%;
+  border-radius: 0%;
+  border: 1px solid #a18fff;
+  padding: 20px;
+  border-radius: 10px;
 }

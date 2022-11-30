@@ -6,6 +6,7 @@ import {
   Validators,
   FormBuilder,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -23,10 +24,15 @@ export class LoginComponent {
   submitted = false;
   constructor(
     public userApiService: UserauthService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {}
   get f() {
     return this.registerForm.controls;
+  }
+
+  goToPage(pageName: string) {
+    this.router.navigate([`${pageName}`]);
   }
   onSubmit() {
     this.submitted = true;
@@ -34,14 +40,7 @@ export class LoginComponent {
     if (this.registerForm.invalid) {
       return;
     }
-    // console.log(this.registerForm);
-    // this.userCred.email = this.registerForm.get['email'].value;
-    // this.userCred.password = this.registerForm.get['password'].value;
-    // console.log(this.userCred);
-    // console.log(this.f());
-
     console.log(this.registerForm.value);
-    //True if all the fields are filled
     if (this.submitted) {
       this.loginApi(this.registerForm.value);
     }
@@ -58,6 +57,7 @@ export class LoginComponent {
     this.userApiService.loginUser(params).subscribe(
       (res) => {
         console.log(res);
+        console.log(this.router.navigate(['/dashboard/feed']));
       },
       (error) => {
         console.log(error.status, error.message);

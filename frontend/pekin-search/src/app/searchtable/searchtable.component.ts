@@ -13,10 +13,11 @@ export class SearchtableComponent {
   userFeed: any;
   searchTag = 'Test';
   spinnerStyle = Spinkit;
-  isLoading = true;
+  isLoading = false;
   typeSelected: string;
   totalResults: number;
   tweetsArr = [];
+  isloadedData = false;
   userCred = {
     email: 'rp16888@gmail.com',
     password: 'Fall@2022',
@@ -28,19 +29,15 @@ export class SearchtableComponent {
     // console.log(data);
   }
 
+  onSearchChange(searchValue: string): void {
+    this.searchTag = searchValue;
+  }
+
   search(paramsString) {
-    // this._userfeedservice = paramsString;
-    this.isLoading = false;
-    // this._userfeedservice.loginUser(this.userCred).subscribe(
-    //   (res) => {
-    //     console.log(res);
-    //   },
-    //   (error) => {
-    //     console.log(error.status, error.message);
-    //   }
-    // )
+    this.isLoading = true;
     this._userfeedservice.getUserFeed(this.searchTag).subscribe((data: any) => {
       this.userFeed = data;
+      this.isloadedData = true;
       if (this.userFeed) {
         this.isLoading = false;
         // console.log(data.tweets);
