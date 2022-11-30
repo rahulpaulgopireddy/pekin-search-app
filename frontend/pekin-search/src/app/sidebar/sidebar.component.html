@@ -1,21 +1,63 @@
-<div class="sidebar-wrapper ">
+<div class="sidebar-wrapper">
+  <div class="sidebar-title-wrapper">
+    <div>
+      <img src="../../assets/logo.png" alt="" style="width: 58px" />
+    </div>
+
+    <ul class="title-list">
+      <li
+        style="
+          color: #a18fff;
+          justify-content: space-around;
+          justify-content: space-between;
+          text-align: center;
+        "
+      >
+        Pekin
+      </li>
+      <li
+        style="
+          color: #ffff;
+          justify-content: space-around;
+          justify-content: space-between;
+          text-align: center;
+        "
+      >
+        Search
+      </li>
+    </ul>
+  </div>
   <ul style="list-style: none">
-    <li class = "a1"><img src="../../assets/logo.png" alt="" style="width: 45px" />Pekin Search</li>
+    <li class="a1"></li>
 
-    
-    <li ><img  src="../assets/57.png" alt="a" style="width: 90px" />
-    <p>Welcome back<br>Rahul Paul</p> </li>
-    <!-- <li (click)="pageRoute('home')">Home</li>
-    <li (click)="pageRoute('home')">Settings</li>
-    <li (click)="pageRoute('home')">Saved</li> -->
+    <li>
+      <img
+        class="profile-img"
+        src="../assets/57.png"
+        alt="a"
+        style="width: 90px"
+      />
+      <p>Welcome back<br />Rahul Paul</p>
+    </li>
 
-    <li   [routerLink]="['/dashboard']"><img src="../assets/Vector.png" alt="" style="width: 20px"  />&nbsp;&nbsp;<a href ="http://localhost:4200/">Home</a></li>
-    
-    <li [routerLink]="['/dashboard/saved']"><img src="../assets/Vector 2.png" alt="" style="width: 15px" />&nbsp;&nbsp;Saved</li>
-   
-    <li [routerLink]="['/dashboard/me']"><img src="../assets/Vector 3.png" alt="" style="width:15px" />&nbsp;&nbsp;Profile</li>
+    <li [routerLink]="['/dashboard/feed']">
+      <img src="../assets/Vector.png" alt="" style="width: 20px" /><a>Home</a>
+    </li>
 
-    <li [routerLink]="['/dashboard/me']"><img src="../assets/Vector 4.png" alt="" style="width: 15px" />&nbsp;&nbsp;Settings</li>
-   
+    <li [routerLink]="['/dashboard/saved']">
+      <img src="../assets/Vector 2.png" alt="" style="width: 15px" />Saved
+    </li>
+
+    <li [routerLink]="['/dashboard/me']">
+      <img src="../assets/Vector 3.png" alt="" style="width: 15px" />Profile
+    </li>
+
+    <li [routerLink]="['/dashboard/me']">
+      <img
+        src="../assets/Vector 4.png"
+        alt=""
+        style="width: 15px"
+      />&nbsp;&nbsp;Settings
+    </li>
   </ul>
 </div>

@@ -115,7 +115,7 @@ router.post(
       // Password matching and error handling
       if (!isMatchPwd) {
         return res.status(400).json({
-          msg: "Incorrect password! Please use correct password ! ",
+          msg: "Incorrect password! Please use correct password !",
         });
       }
 

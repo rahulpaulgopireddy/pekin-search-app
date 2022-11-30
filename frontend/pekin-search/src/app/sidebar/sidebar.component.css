@@ -1,27 +1,23 @@
 .sidebar-wrapper {
   height: 100vh;
+  /* border-right: 1px solid #a18fff; */
 }
 
-li{
-  margin: 70px 0;
-}
-.a1{
-  
-width: 84px;
-height: 57px;
-left: 112px;
-top: 24px;
+.a1 {
+  width: 84px;
+  height: 57px;
+  left: 112px;
+  top: 24px;
 
-font-family: 'Avenir Next';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 38px;
-display: flex;
-align-items: center;
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
 
-color: #A18FFF;
-
+  color: #a18fff;
 }
 a:link {
   color: grey;
@@ -45,4 +41,28 @@ a:active {
   color: grey;
   background-color: transparent;
   text-decoration: underline;
+}
+
+.title-list {
+  list-style: none;
+}
+
+.sidebar-title-wrapper {
+  display: inline-flex;
+  width: 100%;
+  border-bottom: 1px solid #a18fff;
+  margin-top: 16px;
+  padding-left: 50px;
+  font-size: 19px;
+}
+
+.profile-img {
+  width: 90px;
+  background: #c0e1ff;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+.title-list {
+  padding: 0px 0px 0px 15px;
 }

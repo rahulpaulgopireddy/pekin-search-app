@@ -1,6 +1,107 @@
-<p><button (click)="search()">search</button></p>
 <div *ngIf="isLoading" class="text-center">
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
+</div>
+
+<!-- Modal -->
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="header-list col-md-12">
+      <div class="col-md-2">
+        <span class="search-title-tag">Library Search </span>
+      </div>
+      <div class="col-md-7">
+        <input class="search-input" type="text" placeholder="Search.." />
+      </div>
+      <div class="col-md-2">
+        <button type="button" (click)="search('test')" class="search-btn">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="">Showing {{ totalResults }} results for "{{ searchTag }}"</div>
+  <ul style="list-style: none">
+    <li class="a3" *ngFor="let tweetMeta of tweetsArr">
+      <div class="a5">
+        Tags:
+        <Span *ngFor="let hastags of tweetMeta['hashtags']" class="tags">{{
+          hastags
+        }}</Span>
+      </div>
+      <div class="text">
+        <div class="tweet-title">Emotion Of the Tweet:</div>
+        <div>{{ tweetMeta.emotion_label }}</div>
+      </div>
+      <div class="text">
+        <div class="tweet-title">Sentiment Label:</div>
+        <div>{{ tweetMeta.sentiment_label }}</div>
+      </div>
+      <div class="text">
+        <div class="tweet-title">Tweet:</div>
+        <div>
+          {{ tweetMeta.text }}
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-
+        labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLabel">
+                Analysis Report
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>emotion_score: {{ tweetMeta.emotion_score }}</li>
+                <li>is_sensitive : {{ tweetMeta.is_sensitive }}</li>
+                <li>like_count : {{ tweetMeta.like_count }}</li>
+                <li>quote_count : {{ tweetMeta.quote_count }}</li>
+                <li>rating : {{ tweetMeta.rating }}</li>
+                <li>reply_count : {{ tweetMeta.reply_count }}</li>
+                <li>retweet_count : {{ tweetMeta.retweet_count }}</li>
+                <li>sentiment_score : {{ tweetMeta.sentiment_score }}</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="search-btn-details"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Details
+      </button>
+    </li>
+
+    <!-- <li (click)="pageRoute('home')">Home</li>
+        <li (click)="pageRoute('home')">Settings</li>
+        <li (click)="pageRoute('home')">Saved</li> -->
+  </ul>
 </div>

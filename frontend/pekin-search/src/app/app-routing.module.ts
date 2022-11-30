@@ -16,7 +16,7 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     children: [
-      { path: '', component: SearchtableComponent },
+      { path: 'feed', component: SearchtableComponent },
       { path: 'saved', component: SavedComponent },
       { path: 'me', component: AboutComponent },
     ],

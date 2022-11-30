@@ -40,6 +40,14 @@ export class UserauthService {
       .pipe(retry(1), catchError(this.errorHandle));
   }
 
+  getUserFeed(searchstring: any): Observable<any> {
+    return this.http
+      .get<any>(
+        'ec2-3-86-218-191.compute-1.amazonaws.com:8080/search/' + searchstring
+      )
+      .pipe(retry(1), catchError(this.errorHandle));
+  }
+
   // Error handling
   errorHandle(error: { error: { msg: string }; status: any; msg: any }) {
     let errorMessage = '';

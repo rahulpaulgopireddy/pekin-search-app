@@ -1,16 +1,16 @@
 .page-wrapper {
   background-color: #2a263f;
   color: #a7a7a7;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .SearchBar {
-  position: absolute;
+  /* position: absolute;
   top: 60px;
   left: 150px;
   height: 40px;
   width: 400px;
-  padding: 12px 28px;
+  padding: 12px 28px; */
 }
 .SearchBar input {
   height: 1000px;
@@ -27,130 +27,108 @@
   color: black;
   background-color: white;
   border-radius: 2px;
-  border: solid   #a18fff;
+  border: solid #a18fff;
   margin-left: 550px;
   margin-right: -5px;
-  margin-top : 55px;
+  margin-top: 55px;
   padding: 12px 28px;
-   
 }
-.a2{
-  
+.a2 {
   width: 84px;
   height: 57px;
   left: 112px;
   top: 24px;
-  
-  font-family: 'Avenir Next';
+
+  font-family: "Avenir Next";
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
   line-height: 38px;
   display: flex;
   align-items: center;
-  
-  color: #A18FFF;
-  
-  }
-  li{
-    margin: 40px 0;
-    
-    
-  }
-  ul{
-    padding:0;
-  }
 
+  color: #a18fff;
+}
+li {
+  margin: 40px 0;
+}
+ul {
+  padding: 0;
+}
 
-  .a3{
-  
-    width: 1004px;
-    height: 10px;
-    left: 2000px;
-    top: 24px;
-    
-    font-family: 'Avenir Next';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 5px;
-    
-    align-items: center;
-    
-    color: #A18FFF;
-    
-    }
-    .a4{
-  
-      width: 1004px;
-      height: 8px;
-      left: 112px;
-      top: 200px;
-      
-      font-family: 'Avenir Next';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 160px;
-      
-      align-items: center;
-      
-      color: #A18FFF;
-      
-      }
-      .a2{
-  
-        width: 1004px;
-        height: 57px;
-        left: 112px;
-        top: 24px;
-        
-        font-family: 'Avenir Next';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 38px;
-        
-        align-items: center;
-        color:beige;
-        
-        
-        
-        }
+.a3 {
+  width: 1004px;
+  height: 10px;
+  left: 2000px;
+  top: 24px;
 
-        .a5{
-  
-          width: 1004px;
-          height: 57px;
-          left: 112px;
-          top: 24px;
-          
-          font-family: 'Avenir Next';
-          font-style: normal;
-          font-weight: 600;
-          font-size: 15px;
-          line-height: 38px;
-          
-          align-items: center;
-          color:beige;
-          
-          
-          
-          }
-          .text{
-  
-           
-            
-            font-family: 'Avenir Next';
-            font-style: normal;
-      
-            font-size: 10px;
-            line-height: 1px;
-            
-            
-            color:darkgray;
-            
-            
-            
-            }
-      
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 5px;
+
+  align-items: center;
+
+  color: #a18fff;
+}
+.a4 {
+  width: 1004px;
+  height: 8px;
+  left: 112px;
+  top: 200px;
+
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160px;
+
+  align-items: center;
+
+  color: #a18fff;
+}
+.a2 {
+  width: 1004px;
+  height: 57px;
+  left: 112px;
+  top: 24px;
+
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 38px;
+
+  align-items: center;
+  color: beige;
+}
+
+.a5 {
+  width: 1004px;
+  height: 57px;
+  left: 112px;
+  top: 24px;
+
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 38px;
+
+  align-items: center;
+  color: beige;
+}
+.text {
+  font-family: "Avenir Next";
+  font-style: normal;
+
+  font-size: 10px;
+  line-height: 1px;
+
+  color: darkgray;
+}
+
+.m0 {
+  margin: 0px;
+}
